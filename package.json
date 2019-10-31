@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "homecoderz",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express-fileupload": "^1.1.0",
+    "body-parser": "^1.19.0",
+    "convert-excel-to-json": "^1.6.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6-alpha.5",
+    "file-saver": "^2.0.2",
+    "mysql2": "^1.7.0",
+    "nodemon": "^1.19.3",
+    "sequelize": "^5.19.6",
+    "sqlite3": "^4.1.0",
+    "xlsx": "^0.15.1"
+  }
+}

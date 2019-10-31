@@ -1,0 +1,11 @@
+{
+    "terminal.integrated.fontSize": 11,
+    "editor.fontSize": 13,
+    "vscode.tsc.compiler.alertTSConfigChanges": "never",
+    "editor.fontLigatures": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true
+}
