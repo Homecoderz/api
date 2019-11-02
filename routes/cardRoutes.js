@@ -66,14 +66,16 @@ router.post('/upload', async (req, res) => {
             } else {
                 response = {
                     success: false,
-                    msg: 'Une erreur inattendue est survenue, les élèves n\'ont pu être enregistrés !'
+                    msg: 'Les élèves n\'ont pu être enregistrés !',
+                    error: 'Il y\'a des erreurs dans le fichier excel'
                 }
             } 
 
         } else{
             response = {
                 success: false,
-                msg: 'Veuillez verifier votre fichier excel et reessayez...'
+                msg: 'Les données de l\'école sont érronnées',
+                error: 'Il y\'a des erreurs dans le formulaire'
             }
         } 
             
@@ -83,6 +85,7 @@ router.post('/upload', async (req, res) => {
             msg: 'Une erreur inattendue s\'est produite, verifiez le fichier excel et réessayez',
             error: error
         }
+        //console.log(error.errors[0]);
     }
 
     res.send(response); 
@@ -93,7 +96,6 @@ router.get('/ecoles', async (req, res) => {
         let ecoles = await Ecole.findAll({ 
             include: [{ model: Eleve, as: 'eleves'}]
         });
-        // res.json(ecoles[0].eleves.length)
         res.json(ecoles)
     }catch(error){
        res.json({ code: 'failed', message: 'Aucun agent trouvé ' + error });
